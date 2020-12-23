@@ -21,27 +21,36 @@ public class SplitString {
         for (int i = 0; i < arrOfStr.length; i++)
         {
             String st1 = arrOfStr[i];
-            char ch[] = st1.toCharArray();
-            int l = ch.length;
-            int s = ch.length;
+            char arr[] = st1.toCharArray();
+            int l = arr.length;
+            int s = arr.length;
             for (int j = 0; j < 1; j++)
             {
-//                s--;
-//                temp= ch[s];
-//                char a=ch[j];
-//                ch[s]=ch[j];
-//                l--;
+
+                int k;
+                char first;
+
+                first = arr[0];
+
+                for(k = 0; k <arr.length-1; k++)
+                {
+                    //Shift element of array by one
+                    arr[k] = arr[k+1];
+                }
+
+
+                arr[k] = first;
 
                 //Work fine
-                temp=ch[s-1];
-                char a = ch[j];
-                ch[s-1] = a;
-                ch[j] = ch[j + 1];
-                ch[j + 1] = ch[j + 2];
-                ch[s - 2] = temp;
+//                temp=ch[s-1];
+//                char a = ch[j];
+//                ch[s-1] = a;
+//                ch[j] = ch[j + 1];
+//                ch[j + 1] = ch[j + 2];
+//                ch[s - 2] = temp;
 
             }
-            for (char c : ch) {
+            for (char c : arr) {
                 System.out.print(c);
                 char cout = c;
                 out = out + c;
