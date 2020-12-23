@@ -1,0 +1,22 @@
+package Dipendra;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArmStrong {
+	
+	public static void main(String[] args) {
+		int num=1020; // int number
+
+
+		while (num > 0) {
+			List<Integer> list=new ArrayList<Integer>();
+			
+		    System.out.println( num % 10);
+		    num = num / 10;
+		    list.add(num);
+		}
+		for(int)
+	}
+
+}

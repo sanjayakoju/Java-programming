@@ -1,0 +1,24 @@
+package Cotiviti;
+
+public class MyTest {
+
+	public static void main(String[] args) {
+		boolean isBinary=false; 
+		String str = "10"; 
+		char ch[] = str.toCharArray();
+		int l =ch.length;
+		 for(int i=0; i<ch.length;i++)
+		 {
+			if(ch[i]==0 || ch[i]==1)
+			{
+				isBinary=true;	
+			}
+			else
+			{
+				isBinary=false;
+				break;
+			}
+		 }
+			System.out.println(isBinary);
+	}
+}

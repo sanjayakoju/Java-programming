@@ -1,0 +1,26 @@
+package Dipendra;
+
+import java.util.Scanner;
+
+public class Ques1 {
+	
+	static int sum(int num)
+	{
+		int sum = 0;
+		while(num>0)
+		{
+			int a=num/10;
+			System.out.println(a);
+		}
+		
+		
+		return sum;
+	}
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter Integer");
+		int a=scan.nextInt();
+		sum(a);
+	}
+}

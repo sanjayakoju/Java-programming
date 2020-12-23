@@ -1,0 +1,39 @@
+package Dipendra;
+
+import java.util.Scanner;
+
+public class Ques1 {
+	
+	static int sum(int num)
+	{
+		int sum=0;
+	    int[]digits = Integer.toString(num).chars().map(c -> c-'0').toArray();  
+	    for(int d : digits)
+	        System.out.print(d); 
+	    
+//			for(int i=0;i<digits.length;i++)
+//			{
+//				if(i==digits.length)
+//				{
+//					sum = (int)Math.pow(digits[i], digits[0]);
+//				}
+//				else
+//				{
+//					sum=(int)Math.pow(digits[i],digits[i+1]);
+//					
+//				}
+//					
+//				
+//			}
+			System.out.println(sum);
+		
+		return sum;
+	}
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter Integer");
+		int a=scan.nextInt();
+		sum(a);
+	}
+}

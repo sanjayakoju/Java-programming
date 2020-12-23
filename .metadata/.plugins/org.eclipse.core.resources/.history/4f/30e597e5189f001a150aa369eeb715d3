@@ -1,0 +1,75 @@
+package Dipendra;
+
+import java.util.Scanner;
+
+public class Ques2 {
+	
+	static int re(String st)
+	{
+		int r=0;
+		char a[]=st.toCharArray();
+		for(int i=0;i<a.length;i++)
+		{
+				int bo=0;
+				int co=0;
+				int bc=0;
+				int cc=0;
+				int sum1=0,sum2=0;
+				if(a[i]=='(')
+				{
+					bo++;
+				}
+				else if(a[i]==')')
+				{
+					bc++;
+				}
+				else if(a[i]=='{')
+				{
+					co++;
+				}
+				else if(a[i]=='}')
+				{
+					cc++;
+				}
+				
+				if(bo!=bc)
+				{
+					if(bo>bc)
+					{
+						sum1=sum1+(bo-bc);
+					}
+					else
+					{
+						sum1=sum1+(bc-bo);
+					}
+					System.out.println("Sum1 :"+sum1);
+				}
+				else if(co!=cc)
+				{
+					if(co>cc)
+					{
+						sum1=sum1+(co-cc);
+					}
+					else
+					{
+						sum2=sum2+(cc-co);
+					}
+					System.out.println("Sum2 :"+sum2);
+				}
+				System.out.println(a[i]);
+					r=sum1+sum2;
+			
+		}
+		
+		return r;
+	}
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter String");
+		String  st=scan.next();
+		System.out.println(re(st));
+		
+	}
+
+}
